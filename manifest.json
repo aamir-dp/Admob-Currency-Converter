@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "AdMob AED to USD Converter",
+    "version": "1.0",
+    "description": "Converts AED amounts to USD on AdMob report pages.",
+    "content_scripts": [
+      {
+        "matches": [
+          "*://*.google.com/admob/*",
+          "*://*.admob.google.com/*"
+        ],
+        "js": ["contentScript.js"],
+        "all_frames": true,
+        "run_at": "document_idle"
+      }
+    ],
+    "host_permissions": [
+      "https://api.exchangerate-api.com/*"
+    ]
+  }
+  
